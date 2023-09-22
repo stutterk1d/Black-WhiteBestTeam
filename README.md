@@ -1,6 +1,3 @@
-It appears that you're trying to create a README file for your Pokémon data science project on GitHub, but the code isn't formatting correctly. GitHub's README files use Markdown (.md) for formatting, so you'll need to adjust the way you include code and text. Here's how you could structure your README.md:
-
----
 
 # Pokémon Team Optimizer for Black & White
 A Data Science project aimed at finding the best Pokémon team for Pokémon Black & White using Python and various data analytics libraries.
