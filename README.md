@@ -1,49 +1,71 @@
 
-# Pokémon Team Optimizer for Black & White
-A Data Science project aimed at finding the best Pokémon team for Pokémon Black & White using Python and various data analytics libraries.
+# Pokemon Team Optimizer for Pokemon Black & White: A Data Science Approach
+
+## Overview
+
+This project utilizes data science and optimization algorithms to identify the best possible team of Pokemon you can have in Pokemon Black & White. The criteria for "best" can be tailored to your specific needs, be it a well-rounded team, a team focusing on a specific type, or any other conditions you'd like to impose.
 
 ## Table of Contents
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-- [Data Sources](#data-sources)
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Data](#data)
 - [Contributing](#contributing)
+- [Credits](#credits)
 - [License](#license)
 
-## Technologies Used
+## Requirements
+
 - Python 3.x
-- Pandas
-- NumPy
-- PuLP
+- numpy
+- pandas
+- PuLP 1.6.8
 
-## Getting Started
-Clone the repository and install the dependencies:
+## Installation
+
+1. Clone this repository.
+
+    ```bash
+    git clone https://github.com/yourusername/pokemon-team-optimizer.git
+    ```
+
+2. Navigate to the project directory.
+
+    ```bash
+    cd pokemon-team-optimizer
+    ```
+
+3. Install the required packages.
+
+    ```bash
+    pip install numpy pandas pulp==1.6.8
+    ```
+
+## Usage
+
+Run the script to get the optimized Pokemon team:
 
 ```bash
-git clone https://github.com/your_username/your_project_name.git
-cd your_project_name
-pip install -r requirements.txt
+python optimizer.py
 ```
 
-Run the main script to get optimized Pokémon team data:
+## Data
 
-```bash
-python main.py
+The data used in this project is a combination of several CSV files that include Pokemon stats, types, and other metrics:
+
+- `Pokemon.csv`: General Pokemon data including stats.
+- `Pokemon Type Chart.csv`: Data that defines the type advantages and disadvantages.
+
+Data is loaded from these files and processed in the main Python script to produce an optimized Pokemon team.
+
+```python
+poke_df = pd.read_csv("../input/pokemon/Pokemon.csv")
+typeChart = pd.read_csv("../input/pokemon-types/Pokemon Type Chart.csv", index_col = [0])
 ```
-
-## Data Sources
-The data for this project was obtained from Kaggle and includes the following:
-
-- `Pokemon.csv`: Basic data about each Pokémon.
-- `Pokemon Type Chart.csv`: Type effectiveness chart.
-
-The data has been filtered to only include Pokémon from the Unova region (Gen V).
 
 ## Contributing
-Feel free to fork this repository, and open a pull request to suggest changes.
 
-## License
-MIT License
+We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute.
 
----
-
-You can copy and paste this Markdown code into your README.md file on GitHub. Modify the links and other details as needed. This should make your README file much easier to read and understand.
+For any questions or suggestions, please open an issue or submit a pull request. Enjoy optimizing your Pokemon team!
